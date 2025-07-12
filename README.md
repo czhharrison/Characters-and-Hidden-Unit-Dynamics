@@ -1,7 +1,16 @@
 # 基于 CNN 与 LSTM 的结构化字符识别与预测建模
 
-本项目为 UNSW Neural Networks 课程 COMP9444 的课程作业，涵盖图像分类、前馈神经网络可视化、序列结构建模与 LSTM 嵌套语法学习。项目共分为三大部分，通过 PyTorch 实现多个网络结构，结合可视化分析理解模型的内部动态过程。
+## 📚 Overview | 项目概述
 
+This project implements and analyzes multiple neural architectures including MLP, CNN, and RNN/LSTM to handle two types of tasks:  
+(1) **Handwritten character image classification** using KMNIST dataset.  
+(2) **Structured sequence modeling and prediction**, focusing on formal grammars such as `anbn`, `anbncn`, and Reber Grammar.  
+The project explores how different architectures encode features, tracks hidden state transitions, and visualizes decision boundaries and predictions.  
+
+本项目实现并分析了多种神经网络结构，包括 MLP、CNN 和 RNN/LSTM，分别用于两个任务：  
+（1）使用 KMNIST 数据集进行**日文手写图像分类**；  
+（2）模拟结构化语法（如 anbn、anbncn 和 Reber Grammar）进行**字符序列建模与预测**。  
+项目重点探索不同模型对特征的编码方式，追踪隐藏状态变化，并通过可视化手段展示预测边界与动态。
 ---
 
 ## 📁 项目结构
@@ -14,6 +23,30 @@
 ├── plot/ # 保存可视化结果（激活图、输出图、轨迹图等）
 ├── hw1.pdf # 最终报告及实验总结
 ```
+---
+---
+
+## 🔧 Components | 模块说明
+
+### Part 1: KMNIST Image Classification | 图像分类
+- Implemented three models: `NetLin` (linear), `NetFull` (1 hidden layer), and `NetConv` (CNN).
+- Accuracy results:  
+  - NetLin: 70%  
+  - NetFull: 85%  
+  - NetConv: **94%**
+- Tools: `PyTorch`, `CrossEntropyLoss`, `ConfusionMatrix`, visualization of misclassified samples.
+
+### Part 2: MLP Manual Design & Visualization | MLP 网络可视化与手动权重设计
+- Built an MLP with manually defined weights (step/sigmoid activation).
+- Visualized hidden unit activations (`hid_X_Y.jpg`) and output boundary (`out_X.jpg`).
+- Achieved **100% accuracy** on 2D binary classification task.
+
+### Part 3: RNN/LSTM for Grammar Learning | 递归网络语法建模
+- Custom sequence generator for `anbn` and `anbncn` structures.
+- Trained RNN/LSTM to track symbol order and predict next character.
+- Hidden state trajectories visualized to show segmented counting and state reset mechanism.
+- Applied LSTM on Reber Grammar to demonstrate **superior long-range dependency modeling**.
+
 ---
 
 ## 🧠 项目功能与成果概览
