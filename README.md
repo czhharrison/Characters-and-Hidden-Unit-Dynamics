@@ -6,12 +6,14 @@
 
 ## 📁 项目结构
 
+```bash
 ├── NetLin / NetFull / NetConv # 图像分类网络模型（KMNIST 数据集）
 ├── check.py / check_main.py # MLP 手动设权训练与激活图可视化
 ├── anbn.py # anbn 序列数据生成器
 ├── RNN + LSTM + 可视化输出 # 序列结构学习与可解释性分析
 ├── plot/ # 保存可视化结果（激活图、输出图、轨迹图等）
 ├── hw1.pdf # 最终报告及实验总结
+```
 ---
 
 ## 🧠 项目功能与成果概览
@@ -46,13 +48,14 @@
 
 ## 📁 Project Structure
 
+```bash
 ├── NetLin / NetFull / NetConv # CNN/MLP models for KMNIST classification
 ├── check.py / check_main.py # Manually weighted MLP + hidden unit visualization
 ├── anbn.py # Sequence generator for structured grammar
 ├── RNN + LSTM + visual outputs # Sequence modeling and interpretability tools
 ├── plot/ # Visual outputs (activation maps, trajectories, etc.)
 ├── hw1.pdf # Final report and analysis
-
+```
 
 ---
 
